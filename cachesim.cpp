@@ -471,9 +471,10 @@ int main ()
   cout << "# Instructions = " << iloads << " references/ins = " <<
     ((float)cache.references()) / iloads << endl;
 
- /////////calc num of ref to a cache blk
-  //cout << "Enter adrs to see its num of references: "; cin >> hex >> addr; 
+   //cout << "Enter adrs to see its num of references: "; cin >> hex >> addr; 
   addr = 0x7fffe2ec;
+	
+  /** Get number of accesses to a cache blk */
   int c = cache.refcnt(addr);
   cout << "Ref count = " << c << endl;
  return 0;
