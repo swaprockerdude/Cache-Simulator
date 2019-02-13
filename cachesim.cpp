@@ -45,10 +45,10 @@ int flag;
 
 int INDEX(int addr) { 
 
- int binv[32]={0},i=0,j=0,tag=0,ind=0,off=0; 
-if(addr!=0)
+ int binv[32] = {0},i = 0, j = 0, tag = 0, ind = 0, off = 0; 
+if(addr != 0)
  {
-   while(addr!=1)
+   while(addr != 1)
    {
     binv[i] = addr%2; //calc bin
     addr = addr/2;
@@ -66,8 +66,8 @@ if(addr!=0)
   //-------------------------------------------------------
    /*cout << endl;
    cout << "No. of tag bits = 19 : ";*/
-j=31;  
-   while(j>12)
+   j = 31;  
+   while(j > 12)
    {
     //cout << binv[j];
     tag += (pow(2,j-12-1))*(binv[j]);
@@ -81,7 +81,7 @@ j=31;
  //-------------------------------------------------------
    //cout << "No. of index bits = 11 : ";
   
-  while(j>1)
+  while(j > 1)
    {
     //cout << binv[j]; 
     ind += (pow(2,j-1-1))*(binv[j]);
@@ -93,7 +93,7 @@ j=31;
 //***********Print offset bits and its int val************
    //cout << "No. of offset bits = 2 : ";
   
-  while(j>=0)
+  while(j >= 0)
    {
     //cout << binv[j]; 
     off += (pow(2,j))*(binv[j]);
@@ -106,10 +106,10 @@ j=31;
 
 int TAG(int addr) { 
 
- int binv[32]={0},i=0,j=0,tag=0,ind=0,off=0;; 
-if(addr!=0)
+ int binv[32] = {0}, i = 0, j = 0, tag = 0, ind = 0, off = 0; 
+if(addr != 0)
  {
-   while(addr!=1)
+   while(addr != 1)
    {
     binv[i] = addr%2; //calc bin
     addr = addr/2;
@@ -127,8 +127,8 @@ if(addr!=0)
 	//-------------------------------------------------------
    /*cout << endl;
    cout << "No. of tag bits = 19 : ";*/
-j=31;  
-   while(j>12)
+  j = 31;  
+   while(j > 12)
    {
     //cout << binv[j];
     tag += (pow(2,j-12-1))*(binv[j]);
@@ -142,7 +142,7 @@ j=31;
  //-------------------------------------------------------
    //cout << "No. of index bits = 11 : ";
   
-  while(j>1)
+  while(j > 1)
    {
     //cout << binv[j]; 
     ind += (pow(2,j-1-1))*(binv[j]);
@@ -156,7 +156,7 @@ j=31;
  //-------------------------------------------------------
    //cout << "No. of offset bits = 2 : ";
   
-  while(j>=0)
+  while(j >= 0)
    {
     //cout << binv[j]; 
     off += (pow(2,j))*(binv[j]);
